@@ -12,9 +12,9 @@ import { mapState } from "vuex";
 export default {
   computed: {
     ...mapState({
-      name: state => state.data.name,
-      height: state => state.data.height,
-      weight: state => state.data.weight
+      name: state => state.user.name,
+      height: state => state.user.height,
+      weight: state => state.user.weight
     })
   }
 };

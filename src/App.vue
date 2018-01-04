@@ -55,11 +55,12 @@ Vue.component(TabItem.name, TabItem);
 export default {
   data() {
     return {
-      selected: 'home'
-    }
+      selected: ""
+    };
   },
   mounted() {
-    this.selected = this.$route.name.toLowerCase()
+    this.selected = this.$route.name.toLowerCase();
+    this.$store.dispatch("getData");
   }
 };
 </script>

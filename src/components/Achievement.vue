@@ -1,9 +1,14 @@
 <template>
   <div>
     achievement
+    <tabbar/>
   </div>
 </template>
 
 <script>
-export default {};
+import Tabbar from "./Tabbar.vue";
+
+export default {
+  components: { Tabbar }
+};
 </script>

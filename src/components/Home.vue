@@ -13,14 +13,19 @@
       data-pattern-size="150"
     />
     <div class="percent-text">{{ nowPercent }}%</div>
+    <tabbar/>
   </div>
 </template>
 
 <script>
+import Tabbar from "./Tabbar";
 import { mapState } from "vuex";
 import loadingBar from "../../assets/loading-bar.min";
 
 export default {
+  components: {
+    Tabbar
+  },
   data() {
     return {
       bubble: null

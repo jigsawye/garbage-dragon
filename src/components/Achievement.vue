@@ -1,7 +1,7 @@
 <template>
   <div>
     achievement
-    <tabbar/>
+    <tabbar selected="achievement" />
   </div>
 </template>
 

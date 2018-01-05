@@ -1,9 +1,5 @@
 <template>
   <div>
-    <mt-header
-      fixed
-      title="Drink More Water"
-    />
     <mt-tabbar v-model="selected">
       <mt-tab-item
         id="home"
@@ -39,21 +35,16 @@
         成就
       </mt-tab-item>
     </mt-tabbar>
-    <div class="margin-top-40px"/>
-    <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      selected: ""
-    };
-  },
-  mounted() {
-    this.selected = this.$route.name.toLowerCase();
-    this.$store.dispatch("getData");
+  props: {
+    selected: {
+      type: String,
+      required: true
+    }
   }
 };
 </script>

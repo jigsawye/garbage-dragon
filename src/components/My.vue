@@ -9,7 +9,7 @@
       體重：{{ weight }} 公斤<br>
       每日水量指標：1500 毫升
     </div>
-    <tabbar/>
+    <tabbar selected="my" />
   </div>
 </template>
 

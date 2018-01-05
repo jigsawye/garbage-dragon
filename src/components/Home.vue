@@ -13,7 +13,7 @@
       data-pattern-size="150"
     />
     <div class="percent-text">{{ nowPercent }}%</div>
-    <tabbar/>
+    <tabbar selected="home" />
   </div>
 </template>
 

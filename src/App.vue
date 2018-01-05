@@ -10,10 +10,20 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
-  mounted() {
-    this.$store.dispatch("getData");
-  }
+  name: 'App',
+  data: () => ({
+    dataFetcher: null,
+  }),
+  created() {
+    setInterval(this.getData, 500);
+  },
+  destroyed() {
+    clearInterval(this.dataFetcher);
+  },
+  methods: mapActions(['getData']),
 };
 </script>
 

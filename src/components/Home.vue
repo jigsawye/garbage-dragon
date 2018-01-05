@@ -18,19 +18,17 @@
 </template>
 
 <script>
-import Tabbar from "./Tabbar";
-import { mapState } from "vuex";
-import loadingBar from "../../assets/loading-bar.min";
+import { mapState } from 'vuex';
+import Tabbar from './Tabbar';
+import loadingBar from '../../assets/loading-bar.min';
 
 export default {
   components: {
     Tabbar
   },
-  data() {
-    return {
-      bubble: null
-    };
-  },
+  data: () => ({
+    bubble: null
+  }),
   computed: {
     ...mapState({
       nowVolume: state => state.data.today.nowVolume,
@@ -46,12 +44,12 @@ export default {
     }
   },
   watch: {
-    nowPercent: function() {
+    nowPercent() {
       this.bubble.set(this.nowPercent);
     }
   },
   mounted() {
-    this.bubble = new ldBar(".bubble");
+    this.bubble = new ldBar('.bubble');
     this.bubble.set(this.nowPercent);
   }
 };

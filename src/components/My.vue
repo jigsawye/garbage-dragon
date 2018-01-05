@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import Tabbar from "./Tabbar";
-import { mapState } from "vuex";
+import Tabbar from './Tabbar';
+import { mapState } from 'vuex';
 
 export default {
   components: {
